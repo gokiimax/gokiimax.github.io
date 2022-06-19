@@ -44,6 +44,7 @@ const header = document.getElementById("header")
 
 const clock = document.getElementById("clock")
 const bookmarks = document.getElementById('bookmarks')
+const wrapper = document.getElementById("wrapper")
 
 const backgroundLink = document.getElementById("bgLink");
 const updateBackground = document.getElementById("updateBg")
@@ -87,7 +88,7 @@ headerText.addEventListener("keyup", (e) => {
 
 updateBackground.addEventListener("click", () => {
     if(backgroundLink.value) {
-        document.body.style.background = `url("${backgroundLink.value}")`
+        wrapper.style.backgroundImage = `url("${backgroundLink.value}")`
     }
     window.localStorage.setItem("background", backgroundLink.value)
 })
@@ -98,7 +99,7 @@ if(window.localStorage.getItem("heading")) {
 }
 
 if(window.localStorage.getItem("background")) {
-    document.body.style.background = `url("${window.localStorage.getItem("background")}")`
+    wrapper.style.backgroundImage = `url("${window.localStorage.getItem("background")}")`
     backgroundLink.value = window.localStorage.getItem("background");
 }
 

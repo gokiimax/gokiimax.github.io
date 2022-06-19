@@ -22,11 +22,8 @@ body {
     width: auto;
 
     overflow: hidden;
-    
-    background: url("../assets/background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+    height: 100vh;
 }
 
 /* ============================== Utils ============================== */
@@ -117,6 +114,11 @@ h4 {
     -webkit-box-align: center;
     -webkit-box-pack: center;
     display: -webkit-box;
+
+    background-image: url("../assets/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #container {
@@ -281,10 +283,6 @@ h4 {
     color: var(--secondary-color);
 
     transition: all .3s ease-in-out;
-}
-
-.theme .dark_mode {
-    background-color: red;
 }
 
 .theme:hover{
