@@ -2,7 +2,18 @@
 setInterval(() => {
     var date = new Date();
     document.getElementById("clock").innerHTML = date.toLocaleTimeString();
-}, 1000)
+}, 0)
+
+/* ============================== Search ============================== */
+const searchBar = document.getElementById("searchBar")
+
+searchBar.addEventListener("keypress", (e) => {
+    if(e.key == "Enter") {
+        if(searchBar.value) {
+            window.open(`https://google.com/search?q=${searchBar.value}`)
+        }
+    }
+})
 
 /* ============================== Sidebar ============================== */
 const Sidebar = document.getElementById('settings')
