@@ -155,3 +155,20 @@ if(window.localStorage.getItem("glowColor")) {
         glow1.style.textShadow = `0 5px 15px ${window.localStorage.getItem("glowColor")}`
     })
 }
+
+/* ============================== Theme ============================== */
+const themeChanger = document.getElementById("theme")
+
+themeChanger.addEventListener("click", () => {
+    document.body.classList.toggle("dark_mode")
+
+    if(document.body.classList.contains("dark_mode")) {
+        window.localStorage.setItem("dark", true)
+    } else {
+        window.localStorage.removeItem("dark")
+    }
+})
+
+if(window.localStorage.getItem("dark")) {
+    document.body.classList.add("dark_mode")
+}
