@@ -1,9 +1,5 @@
 /* ============================== Defaults ============================== */
 
-:root {
-    --background: url("../assets/background.png")
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -14,8 +10,10 @@ body {
     font-size: 10pt;
     color: #000;
     width: auto;
+
+    overflow: hidden;
     
-    background: var(--background);
+    background: url("../assets/background.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -31,6 +29,36 @@ body {
 
 .glow-font {
     text-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.btn {
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    margin-top: 35px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 15px 10px rgba(255, 255, 255, 0.5);
+    width: 170px;
+    height: 25px;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.192);
+    margin-left: 20px;
+}
+
+.label {
+    margin-top: 20px;
+}
+
+.txt {
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 14px;
+
+    background: transparent;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.192);
+    border-radius: 3px;
+    backdrop-filter: blur(10px);
 }
 
 .h1 {
@@ -53,18 +81,28 @@ body {
 
 /* ============================== Main ============================== */
 #wrapper {
+    width: 100%;
     height: 100%;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
+}
+
+#container {
+    position: relative;
+    width: 100%;
     min-height: 100vh;
-    
+    overflow: hidden;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
 }
 
 #main {
     width: 700px;
     height: 400px;
+    text-align: center;
 }
 
 #header {
@@ -88,4 +126,48 @@ body {
 
 .socials a:hover{
     text-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ============================== Settings ============================== */
+.leftMenu {
+    width: 0px;
+    height: 100%;
+    min-height: 100vh;
+    transition: .4s;
+
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.leftMenu .settings {
+    margin-top: 25px;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    opacity: 0;
+    padding-bottom: 20px;
+}
+
+.leftMenu .txt {
+    margin-left: 10px;
+}
+
+.leftMenu input:focus {
+    border: none;
+    outline: none;
+}
+
+.bglbl {
+    margin-top: 20px;
+}
+
+.leftMenu .label {
+    padding-left: 20px;
+}
+
+.leftMenu input::placeholder {
+    color: rgb(104, 104, 104);
 }
