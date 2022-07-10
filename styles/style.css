@@ -137,10 +137,6 @@ section {
 
 /* Make it responsive */
 @media screen and (max-width: 768px) {
-    #wrapper {
-        margin-top: 50%;
-    }
-
     body {
         overflow: hidden;
     }
