@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Page embed -->
+        <meta content="gokiimax - Professional Human" property="og:title">
+        <meta content="gokiimax.github.com" property="og:description">
+        <meta content="https://gokiimax.github.com" property="og:url">
+        <meta content="#fa96dc" data-react-helmet="true" name="theme-color">
+        <title> ● gokiimax</title>
+    
+        <!-- Icon -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Page embed -->
-    <meta content="gokiimax - Professional Human" property="og:title">
-    <meta content="gokiimax.github.com" property="og:description">
-    <meta content="https://gokiimax.github.com" property="og:url">
-    <meta content="#fa96dc" data-react-helmet="true" name="theme-color">
-    <title>gokiimax</title>
-
-    <!-- SVG Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/navbar.css">
-</head>
+        <!-- SVG Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
 <body class="dark">
 
-
     <div class="container">
+        <div id="particles-js"></div>
 
-        <div id="nav-links-themeChanger" class="back">
-            <i class="fa-solid fa-circle-half-stroke"></i>
+        <div id="play_main" class="play_main">
+            <i id="play_icon" class="fa-solid fa-play glow-font"></i>
           </div>
 
         <div id="wrapper">
@@ -49,12 +51,15 @@
             </ul>
         </div>
 
+        <!-- audio -->
+        <audio id="music" src="./music.mp3"></audio>
+
+        <!-- particles js files -->
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/music.js"></script>
+
     </div>
-
-
-    <script src="assets/particles/particles.js"></script>
-    <script src="js/theme_changer.js"></script>
-    <script src="js/navbar.js"></script>
 
 </body>
 </html>
